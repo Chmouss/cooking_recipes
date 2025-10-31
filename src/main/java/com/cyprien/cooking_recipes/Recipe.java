@@ -1,5 +1,6 @@
 package com.cyprien.cooking_recipes;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Recipe {
@@ -7,11 +8,11 @@ public class Recipe {
     private int id;
     private String name;
     private String description;
-    private String ingredients; //placeholder, should be a list with dependencies etc
+    private List<String> ingredients; //placeholder, should be a list with dependencies etc
 
     public Recipe(){}; // no arg constructor, will see if needed later
 
-    public Recipe(int id, String name, String description, String ingredients){
+    public Recipe(int id, String name, String description, List<String> ingredients) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -42,11 +43,11 @@ public class Recipe {
         this.description = description;
     }
 
-    public String getIngredients() {
+    public List<String> getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(String ingredients) {
+    public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
     }
 
