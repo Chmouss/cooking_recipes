@@ -17,13 +17,13 @@ public class RecipeController {
                         1,
                         "Pizza Pepperoni",
                         "PISHAAAAAAAAAAAA",
-                        List.of("pizza dough, pepperonis, mozzarella, tomato sauce")
+                        List.of("pizza dough", "pepperonis", "mozzarella", "tomato sauce")
                 ),
                 new Recipe(
                         2,
                         "Pasta Carbonara",
                         "you love it ~",
-                        List.of("not fresh pasta, eggs, pecorino, guanciale, black pepper")
+                        List.of("not fresh pasta", "eggs", "pecorino", "guanciale", "black pepper")
                 )
         );
     }
