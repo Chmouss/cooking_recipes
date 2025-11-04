@@ -10,22 +10,30 @@ import java.util.List;
 @RequestMapping("api/v1/recipes")
 public class RecipeController {
 
+    private final RecipeService recipeService;
+
+    public RecipeController(RecipeService recipeService){
+        this.recipeService = recipeService;
+    }
+
     @GetMapping
-    public List<Recipe> getAllRecipes(){
-        return List.of(
-                new Recipe(
-                        1,
-                        "Pizza Pepperoni",
-                        "PISHAAAAAAAAAAAA",
-                        List.of("pizza dough", "pepperonis", "mozzarella", "tomato sauce")
-                ),
-                new Recipe(
-                        2,
-                        "Pasta Carbonara",
-                        "you love it ~",
-                        List.of("not fresh pasta", "eggs", "pecorino", "guanciale", "black pepper")
-                )
-        );
+    public List<Recipe> getRecipes(){
+        return recipeService.getAllRecipes();
+
+//        return List.of(
+//                new Recipe(
+//                        1,
+//                        "Pizza Pepperoni",
+//                        "PISHAAAAAAAAAAAA",
+//                        List.of("pizza dough", "pepperonis", "mozzarella", "tomato sauce")
+//                ),
+//                new Recipe(
+//                        2,
+//                        "Pasta Carbonara",
+//                        "you love it ~",
+//                        List.of("not fresh pasta", "eggs", "pecorino", "guanciale", "black pepper")
+//                )
+//        );
     }
 
 }
