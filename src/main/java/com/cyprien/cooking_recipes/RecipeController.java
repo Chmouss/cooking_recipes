@@ -34,10 +34,16 @@ public class RecipeController {
 //        );
     }
 
+    @GetMapping("{id}")
+    public Recipe getRecipeById(@PathVariable Integer id) {
+        return recipeService.getRecipeById(id);
+    }
+
     @PostMapping
     public void addNewRecipe(@RequestBody Recipe recipe){
         recipeService.insertRecipe(recipe);
     }
+
 
 
 }

@@ -20,4 +20,8 @@ public class RecipeService {
     public void insertRecipe(Recipe recipe) {
         recipeRepository.save(recipe);
     }
+
+    public Recipe getRecipeById(Integer id) {
+        return recipeRepository.findById(id).orElseThrow(() -> new IllegalStateException(id + "not found") );
+    }
 }
