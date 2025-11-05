@@ -17,4 +17,7 @@ public class RecipeService {
         return recipeRepository.findAll(); //optimize with .stream().map .....
     }
 
+    public void insertRecipe(Recipe recipe) {
+        recipeRepository.save(recipe);
+    }
 }
